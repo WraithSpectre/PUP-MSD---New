@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-color: #d9d9d9;
+}
+.logo{
+  flex: 1;
+}
+.logo a{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #800000;
+  text-decoration: none;
+}
+.logo img{
+  width: 40px;
+  margin-right: 10px;
+}
+.navbar{
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+}
+.navbar ul{
+  list-style: none;
+  display: flex;
+  margin-right: 0px;
+}
+.navbar ul li{
+  padding: 10px 10px;
+  position: relative;
+}
+.navbar ul li a{
+  font-size: 20px;
+  color: #808080;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.navbar ul li a:after{
+  content: "";
+  position: absolute;
+  background-color: #800000;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+.navbar ul li a:hover{
+  color: #800000;
+}
+.navbar ul li a:hover:after{
+  width: 100%;
+}
+.dropdown-menu{
+  display: none;
+}
+.dropdown-menu ul li a{
+  font-size: 16px;
+}
+.navbar ul li:hover .dropdown-menu{
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 120%;
+  background-color: #fff;
+}
+.navbar ul li:hover .dropdown-menu ul{
+  display: block;
+  margin-left: 0px;
+}
+.navbar ul li:hover .dropdown-menu ul li{
+  width: 200px;
+  margin-top: -10px;
+}
+.action{
+  position: fixed;
+  top: 10px;
+  right: 60px;
+  display: block;
+}
+.navbar ul .action .profile{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.navbar ul .action .profile img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.navbar ul .action .usermenu{
+  position: absolute;
+  top: 65px;
+  right: -20px;
+  padding: 10px 10px;
+  background-color: #fff;
+  width: 250px;
+  box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.navbar ul .action .usermenu.active{
+  visibility: visible;
+  opacity: 1;
+}
+.navbar ul .action .usermenu::before{
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+  display: block;
+}
+.navbar ul .action .usermenu h3{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px 0;
+  font-weight: 5000;
+  color: #000;
+  line-height: 1.0em;
+}
+.navbar ul .action .usermenu hr{
+  opacity: 1;
+  
+}
+.navbar ul .action .usermenu ul{
+  display: block;
+}
+.navbar ul .action .usermenu ul li{
+  list-style-type: none;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  width: 230px;
+}
+.navbar ul .action .usermenu ul li img{
+  width: 30px;
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.navbar ul .action .usermenu ul li:hover img{
+  opacity: 1;
+}
+.navbar ul .action .usermenu ul li a{
+  display: block;
+  text-decoration: none;
+  color: #808080;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar ul .action .usermenu ul li:hover a{
+  color: #800000;
+}
+
+.navbar-nav a.active {
+  color: #800000; /* Change this to your desired active link color */
+  font-weight: bold; /* You can customize the style for the active link */
+  
+}
+
